@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        let T= [47,32,98,57,10,4];
+        function tribulle(T) {
+            let n = T.length;
+            let changed = true
+            while (changed) {
+                changed=false
+                for(let j=0; j<n-1 ; j++) {
+                    if (T[j] > T[j+1]) {
+                        [[T[j]],[T[j+1]]]=[[T[j+1]],[T[j]]];
+                        changed = true;   
+                        // console.log(T);  affiche le process
+
+                    }
+                }
+                
+            }
+            
+        }
+        
+        tribulle(T);
+        console.log(T)
+    </script>
+</body>
+</html>

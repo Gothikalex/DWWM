@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
+    <style type="text/css">
+        div {height: 300px; 
+            width: 500px; 
+            background-color: blue; 
+            border: 5px solid yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row" id="row1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores officiis reiciendis consectetur, ipsa ab saepe facilis pariatur fugit qui. Cum delectus similique dolore officiis necessitatibus doloremque suscipit velit voluptas in!</div>
+        <div class="row" id="row2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est odit architecto rerum sed eaque ducimus voluptatem, nobis corrupti quos autem placeat ut expedita veritatis sunt, itaque ipsa, sequi enim qui?</div>
+        <div class="row" id="row3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla nam deserunt totam dolorum rem odio laboriosam reprehenderit amet, ipsam sit ducimus unde veniam molestiae aspernatur dolore provident iure explicabo? Possimus.</div>
+        <div class="row" id="row4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis autem hic, a dolorum in dolores quaerat magnam. Ad, dolores suscipit impedit nostrum explicabo beatae deleniti illum aperiam architecto corrupti qui.</div>
+        <div class="row" id="row5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, assumenda at quae voluptates perferendis iste ratione iusto molestias voluptatibus iure eum unde totam nostrum fugit quo dicta vel minus fugiat.</div>
+        <div class="row" id="row6">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi optio voluptate, repellendus, eius voluptatibus similique consequuntur quas quo numquam quaerat reprehenderit? Exercitationem repudiandae, corrupti eius magnam laudantium recusandae maxime id?</div>
+    </div>   
+    
+    <script>
+        $(document).ready(function(){
+            $(".row").mouseover(function(){
+                $(this).css("background","red");
+            })
+            $(".row").mouseout(function(){
+                $(this).css("background","blue");
+            })
+            $(".row").mouseover(function(){
+                console.log( $(this).attr("id") )
+            })
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+body {
+    font-family: 'Crete Round', serif;
+    color: #666666;
+    text-align: center;
+
+}
+
+#menu-déroulant{
+    display: none;
+}
+header h1 {
+    
+    float: left;
+    margin-left: 10px;
+}
+
+span.orange {
+    color: orange;
+}
+
+nav {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    
+}
+
+header ul li {
+    
+    margin-right: 20px;
+    display: inline-block    ;
+}
+header a{
+    color: black;
+    text-decoration: none;
+}
+
+#main-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 650px;
+    width: auto;
+    background-image: url(../exercice/main1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h2 {
+    padding-top: 100px;
+}
+
+section#main-image a {
+    text-decoration: none;
+    color: white;
+
+}
+section#steps{
+    
+}
+
+
+section#steps #step-1 {
+
+    
+    background-image: url(../exercice/steps-icon-1.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    width: 300px;
+}
+
+#step-2 {
+ 
+    background-image: url(../exercice/steps-icon-2.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    width: 300px;
+}
+
+#step-3 {
+
+    background-image: url(../exercice/steps-icon-3.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    width: 300px;
+}
+footer {
+    position: center;
+    background-color: silver;
+}
+
+.button-1 
+    {
+        height: 250px;
+        width: 960px;
+        margin-right: 20px;
+            border: 1px solid orange;
+            border-radius: 5px;
+            padding: 15px;
+        background-color: orange;
+        
+    }
+    
+
+section ul li {
+    width: 33%;
+    margin-top: 50px;
+    display: inline-block;
+
+}
+section ul li h4 {
+    margin-top: 100px;}
+
+section #contact div .wrapper h3{
+    text-decoration: underline aqua;
+}
+
+@media screen and (max-width:700px) {
+    #menu-déroulant  {
+        display: block;
+    
+    }
+    nav {
+      display: none;
+        
+    }
+}

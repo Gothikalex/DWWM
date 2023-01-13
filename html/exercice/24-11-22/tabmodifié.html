@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous"> 
+<style>
+/* applique le css à toutes les classes dont le nom contient la chaine col- */
+[class*="col-"] {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.gris { background-color: grey;}
+
+.jaune {  background-color: yellow ; }
+
+.vert { background-color: green; }
+
+</style>
+</head>
+  <body>
+    <div class="container">
+      <h3>Mix</h3>
+      <div class="row">
+        <div class="gris col-12  col-md-6 col-lg-8">GRIS </div>
+        <div class="vert col-12  col-md-6 col-lg-4">VERT </div>
+      </div>
+      
+      <div class="row">
+        <div class="jaune col-8  col-md-4 col-lg-4">JAUNE</div>
+        <div class="jaune col-2  col-md-4 col-lg-4">JAUNE</div>
+        <div class="jaune col-2  col-md-4 col-lg-4">JAUNE</div>
+      </div>
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+@mixin my-mixin($some-number) {
+    padding: $some-number;
+    margin: $some-number;
+}
+
+.my-module {
+    @include my-mixin(10px);
+}
+
+@function moncalcul($x, $y) {
+    @return $y + $x
+}
+
+.my-module {
+    padding: moncalcul(10px, 5px);
+}

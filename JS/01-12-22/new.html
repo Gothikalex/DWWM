@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        function person(nom, prenom, age, sexe) {
+            this.nom = nom;
+            this.prenom = prenom;
+            this.age = age;
+            this.sexe = sexe;
+            this.affiche = function () {
+                console.log(`je m'appelle ${this.prenom} ${this.nom} et j'ai ${this.age} ans`)
+            }
+            this.affiche2 = () => console.log(`je m'appelle ${this.prenom} ${this.nom} et j'ai ${this.age} ans`.toUpperCase())
+
+        }
+
+        let user1 = new person("smith", "will", 47, "M");
+        let user2 = new person("lesyeuxbleus", "isabella", 55, "F");
+        console.log(user1)
+        user1.affiche2()
+        console.log(user2)
+        user2.affiche()
+        /*
+        c'est comme si j'avais fait
+            let paul = { nom: "smith",
+                         prenom: "will" ,
+                         age: 47 ,
+                         sexe: M ,
+                        }
+        */
+
+    </script>
+</body>
+
+</html>

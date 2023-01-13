@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        let chevy01 = {
+            make: 'Chevy',
+            model: 'Bel Air',
+            year: 1957,
+            passengers: 2,
+            convertible: false,
+            mileage: 1021,
+            started: false,
+            fuel: 0,
+            drived: false,
+            credits: 0,
+
+            faireleplein: function (qte) {
+                console.log("je fais le plein")
+                this.fuel = qte
+                return this
+            },        
+
+            demarre: function () {
+                if (this.fuel > 0) {
+                    this.started = true;
+                    console.log('je demarre...')
+                }
+                else {
+                    console.log(`prendre de l'essence`)
+                }
+                return this
+            },
+
+            stop: function () {
+                if (this.started) {
+                    console.log('stop...')
+                }
+                this.started = false;
+                return this
+            },
+            drive: function () {
+
+                if (this.started) {
+                    console.log("vroum")
+                    this.drived = true;
+                }
+                else {
+                    console.log(`demarre la voiture d'abbord`)
+                }
+                return this
+            },
+            crediter: function(){
+                console.log("je vais retirer de le tunasse")
+                if (this.credits = 0) {
+                this.credits=100
+                }
+                return this
+            },
+        }
+
+        if (chevy01.fuel === 0) {
+            chevy01.faireleplein(100).demarre().drive().stop().crediter()
+            //le credit est a zero, il faut aller à la banque crediter le compte pour pouvoir faire le plein.
+        }
+
+
+
+    </script>
+</body>
+
+</html>

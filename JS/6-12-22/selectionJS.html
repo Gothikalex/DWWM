@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #bouton { width: 80px; height: 50px; border: 1px solid rgb(13, 214, 63);}
+        #bouton2 { width: 80px; height: 50px; border: 1px solid red;}
+        .style1 { color: aqua ; font-size: 20px;}
+        .style2 { color: rgb(28, 25, 216) ; font-size: 60px;}
+    </style>
+</head>
+<body>
+    <p id="navigation" class="pclasse"> paragraphe1</p>
+    <p id="pieddepage" class="pclasse2"> paragraphe2</p>
+    <p id="copyrigth" class="pclasse"> paragraphe3</p>
+
+    <div id="bouton">applique style1</div>
+    <div id="bouton2">remove style1</div>
+
+    <script type="text/javascript">
+        let navi = document.getElementById("navigation") ;
+        // console.log(navi) ;
+        // // selection d'un élément dont l'ID est "navigation" .
+        // navi.innerText = "coucou"  //changement du contenu.
+        navi.innerHTML = "<strong> un texte </strong>"
+
+        // // récupération des éléments par leur class. renvoi un talbeau HTMLCollection.
+        // let lesPclasses = document.getElementsByClassName("pclasse")
+        // // console.log(lesPclasses);
+
+        // // équivalent querySelector qui fonctionne comme le selecteur CSS.
+
+        // // console.log(document.querySelector("#pieddepage"))
+        // // console.log(document.querySelectorAll(".pclasse"))
+
+        // // récuparation des éléments par le nom (<p> ici). 
+
+        // let lesElements = document.getElementsByTagName("p")
+        // console.log(lesElements[0]);
+
+        document.getElementById("bouton").addEventListener("click" , function(evt) { 
+
+            console.log("cible", evt.target)
+            console.log("type", evt.type)
+            console.log("X", evt.screenX)
+            console.log("Y", evt.screenY)
+            // alert("CLICK"); 
+            // event souris :
+            //          click, mouseover, mouseout, mousedown, mousemove
+            //
+            // event formulaires
+            //          keydown, keyup
+            //          focus, submit, blur, change
+            //
+            // modifier le contenu de p#navigation
+            let bouton= document.getElementById("navigation");
+            bouton.innerText = "changement du texte"
+
+            let n = document.getElementById("navigation") ;
+            console.log(n.classList)
+            n.classList.add("style1")
+        } );
+
+        document.getElementById("bouton2").addEventListener("click" , function(evt) {
+            let n1 = document.getElementById("navigation") ;
+            console.log(n1.classList)
+            n1.classList.remove("style1")
+        } );
+    </script>
+</body>
+</html>

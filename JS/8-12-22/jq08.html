@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/combine/npm/jquery@3.6.1,npm/ejs@3.1.8/ejs.min.js,npm/ejs@3.1.5"></script>
+    <title>Document</title>
+    
+</head>
+
+<body>
+    <div id="blog"></div>
+
+
+<script id="montemplate" type="text/x-ejs-template">
+   <% for ( let i=0 ; i < posts.length ; i++ ) { %>
+    <h1><%= posts[i].title %></h1>
+    <p><%= posts[i].text %></p>
+            <p><i>by <%= posts[i].author %></i></p>
+            <hr>
+<% } %>
+
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        
+        let blogposts = [
+            {title: "Blog", text: "Blog", author: "noam Chomsky"},
+            {title: "lorem ipsum", text: "lorem", author: "noam Chomsky"},
+            {title: "mon article", text: "article numero 3 cqfd", author: "Mickael"}
+        ]
+
+        let html = ejs.render($("#montemplate").text(), { posts: blogposts} )
+        console.log(html)
+        $("#blog").html(html)
+
+    })
+
+</script>
+
+</body>
+</html>

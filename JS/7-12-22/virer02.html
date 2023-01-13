@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // constructeur d'objet
+        function Personne(n,p,a) {
+            this.lastname = n ,
+            this.firstname = p ,
+            this.age = a
+            this.presente= function(m) {
+                console.log (`${m}, j'me presente je m'appelle ${this.firstname} ${this.lastname} et j'ai ${this.age} ans`)
+            }
+        }
+
+        let moi = new Personne("Callagan" , "Tony" , 55)
+        moi.presente('Salut')
+        console.log(moi)
+    </script>    
+</body>
+</html>

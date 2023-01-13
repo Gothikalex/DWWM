@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function myHtml(elmt, id, class, contenu) {
+            this.elmt = tag;
+            this.id = id;
+            this.class = class;
+            this.contenu = contenu;
+            this.affiche = function () {
+                console.log(`${this.elmt} : ${this.id} ,${this.class} ${contenu}`)
+            }
+            
+        }
+        let test1 = new myHtml("h1", "titre1", "class1", "ici le titre 1");
+        console.log(test1)
+
+        // let h1 = {
+        //     tag: "h1",
+        //     id: "titre1",
+        //     class: "class1",
+        //     contenu: "Ici le titre 1",
+        //     css: {
+        //         color: "blue",
+        //         background: "yellow"
+        //     },
+
+        //     affiche: function () {
+        //         document.write(`<style> h1 { `)
+        //         for (i in this.css) {
+        //             document.write(` ${i} : ${this.css[i]} ; `)
+        //         }
+        //         document.write(`</style>`)
+        //         document.write(`<${this.tag} id="${this.id}" class="${this.class}" >${this.contenu}</h1>`)
+        //     }
+        // }
+
+        // let p1 = {
+        //     tag: "p",
+        //     id: "un",
+        //     class: [],
+        //     contenu: "1er test",
+        //     css: {
+        //         color: "blue"
+        //     },
+
+        //     affiche: function () {
+        //         document.write(`<style> h1 { `)
+        //         for (i in h1.css) {
+        //             document.write(` ${i} : ${this.css[i]} ; `)
+        //         }
+        //         document.write(`</style>`)
+        //         document.write(`<${this.tag} id="${this.id}" class="${this.class}" >${this.contenu}</p>`)
+        //     }
+        // }
+
+
+        // const html = { h1, p1 }
+
+        // for (i in html) {
+        //     html[i].affiche()
+        // }
+    </script>
+</body>
+
+</html>

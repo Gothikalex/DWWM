@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .row{
+            display: flex;
+            background-color: orange;
+            
+        }
+        .col-6{
+            flex-grow: 6;
+            border: 1px solid black;
+        }
+        .col-4{
+            flex-grow: 4;
+            border: 1px solid black;
+        }
+        .col-2{
+            flex-grow: 2;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">r1dv1 longueur6</div>
+            <div class="col-6">r1dv2 longueur6</div>
+        </div>
+    </div>
+    <div>
+        <div class="row">
+            <div class="col-6">r2dv1 longueur6</div>
+            <div class="col-4">r2dv2 longueur4</div>
+            <div class="col-2">r2dv3 longueur2</div>
+        </div>
+    </div>
+    <div>
+        <div class="row">
+            <div class="col-2">r3dv1 longueur2</div>
+            <div class="col-2">r3dv2 longueur2</div>
+            <div class="col-2">r3dv3 longueur2</div>
+            <div class="col-2">r3dv4 longueur2</div>
+            <div class="col-2">r3dv5 longueur2</div>
+        </div>
+    </div>
+</body>
+</html>

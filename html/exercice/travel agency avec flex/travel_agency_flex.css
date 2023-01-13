@@ -1,0 +1,37 @@
+nav div.menu {
+    display: flex;
+    justify-content: flex-end;
+    
+}
+#accueil{
+    
+    display: flex;
+    padding: 30px;
+    background-color: aqua;
+}
+#destinations{
+    display: flex;
+    padding: 30px;
+    background-color: blueviolet;
+
+}
+#contacts{
+    display: flex;
+    padding: 30px;
+    background-color: chartreuse;
+
+}
+ #container {
+    display: flex;
+    flex-direction: row;
+}
+
+div #step-1{
+    
+
+}
+div #step-2{
+}
+div #step-3 {
+    
+}

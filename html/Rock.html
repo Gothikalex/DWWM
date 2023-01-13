@@ -1,0 +1,95 @@
+<html>
+    <html lang="en">
+        <head>
+            <meta charset="utf-8">
+            <title>le formulaire</title>
+        </head>
+        <body>
+
+
+            <h2>The method attribute</h2>
+
+            <p>Ce formulaire sera soumius en utilisant la méthode GET:</p>
+
+            <form action="#" target="_blank" method="GET">
+
+                <input type="radio" name="genre" value="rock" checked="checked" /> rock
+                <input type="radio" name="genre" value="pop" /> pop
+                <input type="radio" name="genre" value="jazz" /> Jazz <br>
+                
+                selection:<br>
+                <select name="selection" >
+                        <option value="1" > un </option>
+                        <option value="2" > deux </option>
+                        <option value="3" > trois </option>
+                </select>
+
+                <br>
+                <textarea name="description" rows="10" cols="50"></textarea>
+                
+                <br>
+
+                    <input type="checkbox" name="scales" checked>
+                    <label for="scales">Scales</label>
+                    <input type="checkbox" name="horns">
+                    <label for="horns">Horns</label>
+
+                <br>
+                    upload de fichier
+                    <input type="file" name="fichier">
+                <br>
+
+                Age:<br>
+                <!--html5 -->
+                    <input type="number" name="âge">
+
+                <br>
+
+                Email:<br>
+                <!--html5 -->
+                    <input type="email" name="email">
+
+                <br>
+
+                Password:<br>
+                <!--html5 -->
+                    <input type="password" name="password" minlength="8" maxlength="16" required>
+
+                <br>
+
+                Date début:<br>
+                <!--html5 -->
+                    <input type="date" 
+                            value="2022-11-27"        
+                            min="2022-11-27"
+                            max="2022-12-27"
+                            name="date-debut">
+
+                    <br>
+
+                    Date fin:<br>
+                <!--html5 -->
+                    <input type="date" 
+                            value="2022-11-28"        
+                            min="2022-11-28"
+                            max="2022-12-27"
+                            name="date-fin">
+
+                    <br>
+                Adresse web:<br>
+                    <input type="url" name="url" required>
+                    <br>
+
+                  <!--pas fini-->
+                    <fieldset style="colour" title="Other form elements">
+                        <legend>Example</legend>
+                        <label>
+                            upload 
+                        </label>
+                    </fieldset>
+
+                <input type="submit" value="ok" />
+
+            </form>
+        </body>
+    </html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+
+    </div>
+    <script>
+        const montablo = [
+            { nom: "pierre", titre: "Doctor", adresse: { norue: "8", rue: "rue jean-jaures", cp: "29200", ville: "BREST" } },
+            { nom: "paul", titre: "Pr", adresse: { norue: "28", rue: "du port", cp: "79200", ville: "TOULON" } },
+            { nom: "jacques", titre: "mdc", adresse: { norue: "18", rue: "rue des glas", cp: "3500", ville: "RENNES" } },
+            { nom: "emile", titre: "mdc", adresse: { norue: "8bis", rue: "rue Gambette", cp: "29000", ville: "QUIMPER" } }
+        ]
+        for (let i = 0 ; i < montablo.length ; i++){
+             
+                let h1 = document.createElement("h1")
+                let inh1 = document.createTextNode(`${montablo[i].titre} ${montablo[i].nom.toUpperCase()}`)
+                h1.appendChild(inh1)
+                document.getElementById('app').appendChild(h1)
+                console.log(inh1)
+
+                
+                let div1 = document.createElement("div")
+                let indiv1 = document.createTextNode(`${montablo[i].adresse.norue} ${montablo[i].adresse.rue} ${montablo[i].adresse.cp} ${montablo[i].adresse.ville}`)
+                div1.appendChild(indiv1)
+                document.getElementById('app').appendChild(div1)
+            
+            };
+        
+    </script>
+</body>
+
+</html>

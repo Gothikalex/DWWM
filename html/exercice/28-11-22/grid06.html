@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .conteneur {
+            display: grid ;
+            height:600px;
+            grid-template-rows: 80px auto auto 80px; 
+            /* header 80px , footer Ã  80px et le reste en automatique */
+            grid-template-areas: "entete"
+                                 "main"
+                                 "sidebar"
+                                 "footer";
+            grid-gap: 20px;
+        }
+
+        .item1 {
+            background-color:brown;
+            grid-area: entete ;
+        }
+        .item2 {
+            background-color:rgb(42, 89, 165);
+            grid-area: main ;
+        }
+        .item3 {
+            background-color:rgb(165, 42, 124);
+            grid-area: sidebar ;
+        }
+        .item4 {
+            background-color:rgb(42, 165, 124);
+            grid-area: footer ;
+        } 
+
+        @media screen and (min-width: 600px ) {
+            .conteneur {
+            grid-template-columns: repeat(3,1fr) ;
+            gris-template-rows: 80px auto 80px ;
+            grid-template-areas: "entete entete entete" 
+                                 "sidebar main main" 
+                                 "sidebar footer footer"
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="conteneur">
+        <div class="items item1">1 entete</div>
+        <div class="items item2">2 main</div>
+        <div class="items item3">3 sidebar</div>
+        <div class="items item4">4 footer</div>
+    </div>
+    
+</body>
+</html>

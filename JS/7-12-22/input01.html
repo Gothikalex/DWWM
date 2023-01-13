@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Document</h1>
+    <p>
+        nom:
+    
+    <input type="text" id="nom" placeholder="saisir votre nom" />
+    </p>
+    <p id="saisie"></p>
+    
+    <script>
+        document.getElementById("nom").addEventListener("focus", function() { console.log("je rentre dans le nom"); });
+        document.getElementById("nom").addEventListener("keydown", function() { console.log(document.getElementById("nom").value); 
+        document.getElementById("saisie").innerHTML = document.getElementById("nom").value 
+        }) ;
+    </script>
+</body>
+</html>

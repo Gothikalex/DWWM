@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
+    <style>
+        p {
+            width: 100px;
+            height: 50px;
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <button>ajoute un paragraphe</button>
+        <p>paragraphe1</p>
+        <p>paragraphe2</p>
+        <p>paragraphe3</p>
+        <p>paragraphe4</p>
+        <p>paragraphe5</p>
+    </div>
+</body>
+<script>
+    // $("p").click(function () { console.log($(this).text()) });
+
+    $(document).on("click", "p" , function() {console.log( $(this).text() ) })
+
+    $("button").click(function () {
+        $("#container").append("<p>paragraphe6</p>")
+    })
+</script>
+
+</html>

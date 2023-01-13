@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+div {
+    background-color: orange;
+    width: 100px ; height: 50px;
+}
+
+    </style>
+</head>
+<body>
+    <h1>Document</h1>
+
+    <div></div>
+
+    <script>
+        let dernierX
+        let bar =document.querySelector("div")
+        // afficher l'event quand je clique en maintenant la souris en bas sur cette barre.
+        bar.addEventListener("mousedown",(event) => {
+        dernierX = event.clientX
+        window.addEventListener("mousemove", moved)
+        //  console.log(event) // => équivaut à function(event) { console.log(event) }
+        //  console.log("X:", event.clientX)
+        })
+
+        function moved(event) { 
+            console.log(event)
+            if (event.buttons ==0){
+                window.removeEventListener("mousemove",moved)
+            } else {
+                let dist = event.clientX - dernierX ;
+                console.log(bar.offsetWidth + dist ) // offSetWidth => largeur de div
+                bar.style.width = dist+"px"
+            }
+        }
+    </script>
+</body>
+</html>

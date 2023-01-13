@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+<meta charset="UTF-8" >
+<title>Horloge</title>
+<style>
+
+/* Positions des chiffres sur le cadran*/
+ 	#chiffre12{position: absolute; top: 100px; left: 200px}
+	#chiffre11{position: absolute; top: 113px; left: 150px}
+	#chiffre10{position: absolute; top: 150px; left: 113px}
+	#chiffre9 {position: absolute; top: 200px; left: 100px}
+	#chiffre8 {position: absolute; top: 250px; left: 113px}
+	#chiffre7 {position: absolute; top: 287px; left: 150px}
+	#chiffre6 {position: absolute; top: 300px; left: 200px}
+	#chiffre5 {position: absolute; top: 287px; left: 250px}
+	#chiffre4 {position: absolute; top: 250px; left: 287px}
+	#chiffre3 {position: absolute; top: 200px; left: 300px}
+	#chiffre2 {position: absolute; top: 150px; left: 287px}
+	#chiffre1 {position: absolute; top: 113px; left: 250px}
+/* Position du rond central*/
+	#centre {position: absolute; top: 200px; left: 200px; font-family: arial}
+	
+/* Positions initiales des aiguilles */
+	#aiguilleheure {position: absolute; top: 110px; left: 200px}
+	#aiguilleminute {position: absolute; top: 110px; left: 200px}
+ 
+</style>
+</head>
+<body>
+
+<p>Une petite horloge...<input type="button" value="Lancer!" onclick="indic=true;tourne()"><input type="button" value="Arrêter!" onclick="indic=false"></p>
+<div id="chiffre1"><p>1</p></div>
+<div id="chiffre2"><p>2</p></div>
+<div id="chiffre3"><p>3</p></div>
+<div id="chiffre4"><p>4</p></div>
+<div id="chiffre5"><p>5</p></div>
+<div id="chiffre6"><p>6</p></div>
+<div id="chiffre7"><p>7</p></div>
+<div id="chiffre8"><p>8</p></div>
+<div id="chiffre9"><p>9</p></div>
+<div id="chiffre10"><p>10</p></div>
+<div id="chiffre11"><p>11</p></div>
+<div id="chiffre12"><p>12</p></div>
+<div id="centre"><p>o</p></div>
+
+<div><img alt="heures" src="rondbleu.png" height="21" id="aiguilleheure" width="21"></div>
+<div><img alt="minutes" src="rondrouge.png" height="21" id="aiguilleminute" width="21"></div>
+
+
+<script>
+
+		var compteur_minutes=0;
+		var compteur_heures=0;
+			
+	
+			let m = setInterval(function() {
+				compteur_minutes++
+				
+				switch(compteur_minutes) {
+					case 0:
+						document.querySelector("#aiguilleminute").style.top="110px"
+			 			document.querySelector("#aiguilleminute").style.left="200px"
+						break;
+					case 1:
+						document.querySelector("#aiguilleminute").style.top="113px"
+			 			document.querySelector("#aiguilleminute").style.left="250px"
+						break;
+					case 2:
+						document.querySelector("#aiguilleminute").style.top="150px"
+			 			document.querySelector("#aiguilleminute").style.left="287px"
+						break;
+					case 3:
+						document.querySelector("#aiguilleminute").style.top="200px"
+			 			document.querySelector("#aiguilleminute").style.left="300px"
+						break;	
+					case 4:
+						document.querySelector("#aiguilleminute").style.top="250px"
+			 			document.querySelector("#aiguilleminute").style.left="287px"
+						break;
+					case 5:
+						document.querySelector("#aiguilleminute").style.top="287px"
+			 			document.querySelector("#aiguilleminute").style.left="250px"
+						break;
+					case 6:
+						document.querySelector("#aiguilleminute").style.top="300px"
+			 			document.querySelector("#aiguilleminute").style.left="200px"
+						break;
+					case 7:
+						document.querySelector("#aiguilleminute").style.top="287px"
+			 			document.querySelector("#aiguilleminute").style.left="150px"
+						break;
+					case 8:
+						document.querySelector("#aiguilleminute").style.top="250px"
+			 			document.querySelector("#aiguilleminute").style.left="113px"
+						break;
+					case 9:
+						document.querySelector("#aiguilleminute").style.top="200px"
+			 			document.querySelector("#aiguilleminute").style.left="100px"
+						break;
+					case 10:
+						document.querySelector("#aiguilleminute").style.top="150px"
+			 			document.querySelector("#aiguilleminute").style.left="113px"
+						break;
+					case 11:
+						document.querySelector("#aiguilleminute").style.top="113px"
+			 			document.querySelector("#aiguilleminute").style.left="150px"
+						break;
+					case 12:
+						document.querySelector("#aiguilleminute").style.top="100px"
+			 			document.querySelector("#aiguilleminute").style.left="200px"
+						break;
+					
+				}
+			},1000)
+
+			let h = setInterval(function() {
+					 
+					compteur_heures++
+				switch(compteur_heures) {
+					case 0:
+						document.querySelector("#aiguilleheure").style.top="110px"
+			 			document.querySelector("#aiguilleheure").style.left="200px"
+						break;
+					case 1:
+						document.querySelector("#aiguilleheure").style.top="113px"
+			 			document.querySelector("#aiguilleheure").style.left="250px"
+						break;
+					case 2:
+						document.querySelector("#aiguilleheure").style.top="150px"
+			 			document.querySelector("#aiguilleheure").style.left="287px"
+						break;
+					case 3:
+						document.querySelector("#aiguilleheure").style.top="200px"
+			 			document.querySelector("#aiguilleheure").style.left="300px"
+						break;	
+					case 4:
+						document.querySelector("#aiguilleheure").style.top="250px"
+			 			document.querySelector("#aiguilleheure").style.left="287px"
+						break;
+					case 5:
+						document.querySelector("#aiguilleheure").style.top="287px"
+			 			document.querySelector("#aiguilleheure").style.left="250px"
+						break;
+					case 6:
+						document.querySelector("#aiguilleheure").style.top="300px"
+			 			document.querySelector("#aiguilleheure").style.left="200px"
+						break;
+					case 7:
+						document.querySelector("#aiguilleheure").style.top="287px"
+			 			document.querySelector("#aiguilleheure").style.left="150px"
+						break;
+					case 8:
+						document.querySelector("#aiguilleheure").style.top="250px"
+			 			document.querySelector("#aiguilleheure").style.left="113px"
+						break;
+					case 9:
+						document.querySelector("#aiguilleheure").style.top="200px"
+			 			document.querySelector("#aiguilleheure").style.left="100px"
+						break;
+					case 10:
+						document.querySelector("#aiguilleheure").style.top="150px"
+			 			document.querySelector("#aiguilleheure").style.left="113px"
+						break;
+					case 11:
+						document.querySelector("#aiguilleheure").style.top="113px"
+			 			document.querySelector("#aiguilleheure").style.left="150px"
+						break;
+					case 12:
+						document.querySelector("#aiguilleheure").style.top="100px"
+			 			document.querySelector("#aiguilleheure").style.left="200px"
+						break;
+					
+				}
+				
+			},12000)
+			
+	
+// 1) utiliser la fonction setTimeout( uneFonction(){} , 1000 ) => execute la fonction dans une seconde
+// 2) modulo sur un entier   =>   1 % 40 = 1  , 2 % 12 = 2 ...etc
+// 3) modifier la fonction pour l'effectuer avec setInterval() 
+//	https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_win_clearinterval
+
+	
+	
+
+		
+
+		
+</script>
+
+</body>
+</html>

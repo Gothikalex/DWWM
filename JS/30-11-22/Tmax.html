@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        let T = [47,32,98,57,10,4];
+        function Tmax(B){
+            let n = T.length;
+            let max = B[0];
+            for (let i=1; i<n;i++){
+                if (B[i] > max) {
+                    max = B[i]
+                }
+            }
+            return max
+        }    
+        
+        console.log(Tmax(T));
+        function Tmin(B){
+            let n = T.length;
+            let min = B[0];
+            for (let i=1; i<n;i++){
+                if (B[i] < min) {
+                    min = B[i]
+                }
+            }
+            return min
+        }    
+        
+        console.log(Tmin(T));
+    </script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+
+body{
+    display: flex;
+    font-family: 'birds_of_paradise__personalRg';
+}
+div .coord{
+    
+    justify-content: center;
+}
+@font-face {
+    font-family: 'birds_of_paradise__personalRg';
+    src: url('./birds_of_paradise__personal_use_only-webfont.woff2') format('woff2'),
+         url('./birds_of_paradise__personal_use_only-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}

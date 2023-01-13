@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAKA,UAAW;EAJP,OAAO,EAKW,IAAI;EAJtB,MAAM,EAIY,IAAI;;AAO1B,UAAW;EACP,OAAO,EAAE,IAAoB",
+"sources": ["mixfunction.scss"],
+"names": [],
+"file": "mixfunction.css"
+}

@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>genhtml2</title>
+</head>
+<body>
+    <script>
+
+        function donneElementParId(id) {
+            for (i in monhtml) {
+                if (id == monhtml[i].id) {
+                    return monhtml[i]
+                }
+            }
+        }
+
+        // version française de la fonction getElementByClassName
+        function donneElementsParClasse(laclasse) {
+            for (i in monhtml) { 
+                if (laclasse == monhtml[i].class){
+                    return monhtml[i]
+                }
+            }
+        }
+
+        function balise(tag, id , classe , contenu , css ) {
+            this.tag = tag;
+            this.id = id;
+            this.class = classe;
+            this.contenu = contenu;
+            this.css = css;
+            this.affiche = function() {
+                document.write(`<style> ${tag}#${id} { `) 
+                            for (i in this.css) {
+                                document.write(` ${i} : ${this.css[i]}  `)
+                                document.write(`}`) 
+                            }
+                            document.write("</style>")
+                document.write(`<${this.tag} id="${this.id}" class="${this.class}" > ${this.contenu}</${this.tag}>`)
+            }
+        }
+
+                let css = { color: "blue" , background: "yellow" }
+
+                let p1 = new balise("p","navigation","pclasse","lorem ipsum deddz dzedzd ",css)
+                let p2 = new balise("p","pieddepage","pclasse2","zefz efze fze fze fzf zf",css)
+                let p3 = new balise("p","copyright","pclasse","un autre texte ",css)
+
+                const monhtml = { p1, p2, p3 } 
+
+                for (i in monhtml) {
+                        monhtml[i].affiche()
+                }
+
+         //  setTimeout(decollage,5000)
+             let navi = donneElementParId("navigation")
+             setTimeout(function(){ 
+                navi.contenu = "changement par la fonction donneelementParID;"
+                for (i in monhtml) {
+                        monhtml[i].affiche()
+                }
+            },5000)
+            let lesElements = donneElementsParClasse("pclasse") ;
+            console.log(lesElements) ;
+
+    </script>
+ 
+</body>
+</html>

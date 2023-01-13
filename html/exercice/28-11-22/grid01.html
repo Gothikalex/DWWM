@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+         On a vu divers outils pour le positionement :
+        table 
+        float 
+        position 
+        flex
+        et maintenant on va voir grid
+        */ 
+        .items {
+            background-color: blue ;
+            border: 1px solid black;
+        }
+        #conteneur {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr ;
+            grid-template-rows: 150px 150px; /* repeat(2, 150px) */
+            grid-row-gap: 10px;
+            grid-column-gap: 10px;
+    
+        }
+        </style>
+    
+</head>
+<body>
+    
+
+    <div id="conteneur">
+        <div class="items">1</div>
+        <div class="items">2</div>
+        <div class="items">3</div>
+        <div class="items">4</div>
+
+        <div class="items">5</div>
+        <div class="items">6</div>
+        <div class="items">7</div>
+        <div class="items">8</div>
+    </div>
+    </body>
+</html>

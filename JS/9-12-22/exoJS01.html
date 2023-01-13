@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
+    <style>
+        input{display:block;}
+        div{display: inline; float: right;}
+    </style>
+</head>
+<body>
+    <input type="text" id="inp1" />
+    <input type="text" id="inp2" />
+    <input type="text" id="inp3" />
+    <input type="text" id="inp4" />
+    <button id="btn">envoie</button>
+    <br>
+    <div>
+        
+        <div id="valinp1">  </div>
+        <div id="valinp2">  </div>
+        <div id="valinp3">  </div>
+        <div id="valinp4">  </div>
+        
+    </div>
+    <script>
+        $(document).ready(function(){
+            $("#btn").click(function(){
+                let valeur1 = $("#inp1").val();
+                $("#valinp1").html("<strong>"+valeur1+"</strong>");
+                let valeur2 = $("#inp2").val();
+                $("#valinp2").html("<strong>"+valeur2+"</strong>");
+                let valeur3 = $("#inp3").val();
+                $("#valinp3").html("<strong>"+valeur3+"</strong>");
+                let valeur4 = $("#inp4").val();
+                $("#valinp4").html("<strong>"+valeur4+"</strong>");
+            });
+        });   
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // const montablo = [
+        //     { nom: "pierre", titre: "doctor", adresse: "8rue des lilas 29200 BREST" },
+        //     { nom: "paul", titre: "Pr", adresse: "8rue des algesiras 29200 BREST" },
+        //     { nom: "jacques", titre: "dentiste", adresse: "8rue victor hugo 29200 BREST" },
+        //     { nom: "emile", titre: "mdc", adresse: "8rue JJaures 29200 BREST" },
+        // ]
+
+        
+        // for (let i=0 ; i<montablo.length ; i++){
+        //     console.log(`Bonjour, je suis ${montablo[i].titre} ${montablo[i].nom} et j'habite ${montablo[i].adresse}.`)
+        //     }
+        
+
+        
+        //faire une boucle qui m'affiche pour chaque objet
+        // "bonjour je suis titre nom et j'habite adresse."
+
+        // let macss = {
+        //     color: "blue",
+        //     bgcolor: "red"
+        // }
+        // pour parcourrir un objet et obtenir les clés:valeurs
+        // for ( let i in macss ) {
+        //     console.log(`${i} : ${macss[i]}`)
+        // }
+
+        const montablo2 = [
+            { nom: "pierre" , titre: "Doctor",  adresse: { norue:"8", rue:"des lilas" , cp:"29200" ,ville:"BREST"},tphs: ["2222","4444"] },
+            { nom: "paul" , titre: "Pr",  adresse: { norue:"8" , rue:"Algesiras" , cp:"29200" , ville:"BREST"},tphs: ["2762","477744","4555"] },
+            { nom: "jacques" , titre: "mdc",  adresse: { norue:"8" , rue:"victor hugo" , cp:"29200" , ville:"BREST"},tphs: ["455222","4334444"] },
+            { nom: "emile" , titre: "mdc",  adresse: { norue:"8" , rue:"JJaures" , cp:"29200" , ville:"BREST"},tphs: ["2222"]},
+        ]
+        for (let j = 0 ; j < montablo2.length ; j++){
+
+            
+            console.log(`Bonjour, je suis ${montablo2[j].titre} ${montablo2[j].nom} et j'habite ${montablo2.adresse.norue} ${montablo2.adresse.rue} ${montablo2.adresse.cp} ${this.montablo2.ville} \net mes téléphone sont: `)
+            for(let k = 0 ; k < montablo2[j].tphs.length ; k++) {
+
+            console.log(`${montablo2[j].tphs[k]}`)
+            }
+        }  
+    </script>
+</body>
+
+</html>

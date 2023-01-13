@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function somme(...tab) {
+            // ... veut dire transforme la liste d'arguments en tableau tab.
+            let total = 0
+            for(let i=0 ; i<tab.length ; i++ ) {
+                total += tab[i]
+                }
+                return total
+            }
+        // console.log( somme(4,5,3) )
+
+        let t1 = [1,2,3,4];
+        let t2 = [5,6,7];
+        // t1 = t1.concat(t2); //ajoute le tab t2 dans le tableau t1
+        // console.log(t1)
+
+        let t3 = [...t1,...t2];  // inversement ... transforme un tableau en liste de variable
+        console.log(t3)
+
+        // destructuring array
+        // [a,b,c] = t2 ;
+        // console.log(a) ;
+        // console.log(typeof a) ;    
+        // console.log(b) ;
+        // console.log(c) ;
+
+        let x = 2 , y = 4 ;
+        [x,y] = [y,x] 
+        // console.log(x) ;
+        // console.log(y) ;
+
+        //destructuring array
+        const person = {
+            nom:'smith',
+            prnom:'john',
+            age:30
+            }
+
+            const { nom , prenom }= person;
+            console.log(nom);
+            console.log(typeof nom);
+            console.log(prenom);
+
+            const personnes = [
+                {nom: 'Smith', prenom:'John'}
+                {nom: 'Kennedy', prenom: 'Polo'}
+            ]
+            for (const {prenom} of personnes) {
+                console.log(nom) ;
+            }
+    </script>
+</body>
+</html>

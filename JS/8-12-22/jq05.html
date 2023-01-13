@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
+    <title>Document</title>
+    <style>
+        p {
+            width: 100px;
+            height: 250px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <main id="autour">
+        <div class="container">
+            <p>
+                Lorem ipsum dolor sit amet <span> consectetur </span> adipisicing elit.
+            </p>
+            <p>autre paragraphe</p>
+        </div>
+    </main>
+
+
+<script>
+    $(document).ready(function () {
+        $("span").parent().css("border", "1px solid red");
+        // $("span").parents("main").css("border", "1px solid red");
+    });
+</script>
+
+</body>
+</html>

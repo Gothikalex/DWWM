@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div id = "app"></div>
+    <br>
+    <button>crée un paragraphe</button>
+
+    <script>
+        let app = document.getElementById("app");
+
+        document.getElementsByTagName("button")[0].addEventListener("click",function(){
+                // let element = document.createElement("p");
+                // let montexte = document.createTextNode("le nouveau p est arrivé")
+                // element.appendChild(montexte);
+                // app.appendChild(element);
+
+                // je veux créer cet élément: <a href="http://www.google.fr"> Go google </a>
+
+                let lien = document.createElement("a")
+                // lien est egal à <a></a>
+                lien.setAttribute("href", "http://www.google.fr")
+                // lien est egal à <a href="http://www.google.fr"></a>
+                let montexte = document.createTextNode("Go Google")
+                lien.appendChild(montexte)
+                // lien est égal à <a href="http://www.google.fr"> Go google </a>
+                app.appendChild(lien)
+                document.getElementsByTagName("button")[0].removeEventListener("click", arguments.callee)
+                //arguments.callee est un pointeur sur la fonction elle-même.
+
+        })
+
+    </script>
+
+</body>
+</html>
